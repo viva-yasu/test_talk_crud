@@ -2,6 +2,7 @@ class TalksController < ApplicationController
   def index
     @talks = Talk.all
     @talk = Talk.new
+    @current_login_user_id = 1
   end
 
   def create
@@ -21,7 +22,7 @@ class TalksController < ApplicationController
 
   private
   def talk_params
-    params.require(:talk).permit(:message)
+    params.require(:talk).permit(:message, :user_id)
   end
 
 end
