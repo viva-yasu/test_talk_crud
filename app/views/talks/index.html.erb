@@ -14,9 +14,13 @@
     <% end %>
 </ul>
 
-<%= form_for(@talk, :url => {:controller => :talks, :action => :create}) do |f| %>
-    <% @talk.user_id = @current_login_user_id %>
+<%= form_for(@new_talk, :url => {:controller => :talks, :action => :create}) do |f| %>
+    <% @new_talk.user_id = @current_login_user_id %>
     <%= f.hidden_field :user_id %>
     <%= f.text_field :message %>
     <%= f.submit "送信" %>
+<% end %>
+
+<% @talk.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
 <% end %>
