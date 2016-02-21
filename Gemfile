@@ -37,6 +37,9 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'hirb'
+  gem 'hirb-unicode'
+  gem 'awesome_print'
 end
 
 group :development do
