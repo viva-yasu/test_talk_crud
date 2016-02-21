@@ -6,3 +6,4 @@ ja:
           attributes:
             message:
               blank: を入力してください
+              too_long: は140文字以内で入力してください
