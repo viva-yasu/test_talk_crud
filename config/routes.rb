@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'index/create'
-
-  get 'index/destroy'
+  get 'talks/index'
+  post 'talks/create', to: "talks#create"
+  post 'talks/destroy', to: "talks#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
